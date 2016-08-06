@@ -1,9 +1,8 @@
 //
 //  PlayerViewController.m
-//  高仿映客
 //
-//  Created by JIAAIR on 16/7/2.
-//  Copyright © 2016年 JIAAIR. All rights reserved.
+//  Created by wszyxc
+//  Copyright © 2016年 wszyxc. All rights reserved.
 //
 
 #import "PlayerViewController.h"
