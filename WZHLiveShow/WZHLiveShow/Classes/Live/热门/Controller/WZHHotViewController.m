@@ -80,11 +80,6 @@ static NSString * LiveControllerID = @"LiveControllerID";
     //获取网络数据
     [self getLiveDataWithPage:self.page];
     
-    //添加一个跳转推流的界面
-    [self addButton];
-    
- 
-    
     
 }
 
@@ -102,38 +97,6 @@ static NSString * LiveControllerID = @"LiveControllerID";
 }
                                  
 
-
-- (void)addButton{
-    
-    
-    // 返回
-    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    btn.backgroundColor = [UIColor brownColor];
-    
-    btn.frame = CGRectMake(10, [UIScreen mainScreen].bounds.size.height -40, 80, 33);
-    
-    [btn setTitle:@"跳转推流界面" forState:UIControlStateNormal];
-    
-    btn.titleLabel.font = [UIFont systemFontOfSize:12];
-    
-    [btn addTarget:self action:@selector(preViewClick) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:btn];
-    
-}
-
-
-- (void)preViewClick{
-    
-    
-//    WZHPreviewController *preVC = [[WZHPreviewController alloc]init];
-//    
-//    [self presentViewController:preVC animated:YES completion:^{
-//        
-//    }];
-//    
-}
 
 
 //添加tableView
