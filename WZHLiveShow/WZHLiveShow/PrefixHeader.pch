@@ -1,0 +1,88 @@
+//
+//  PrefixHeader.pch
+//  WZHLiveShow
+//
+//  Created by wszyxc on 16/8/2.
+//  Copyright © 2016年 wszyxc. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+
+//存储偏好设置的快捷方法
+#import "WZHUserDefaults.h"
+/**
+ *  以下是一些实用 的分类
+ */
+#import "UIView+SLExtension.h"
+#import "NSArray+Log.h"
+#import "UIControl+Add.h"
+#import "UIBarButtonItem+Item.h"
+#import "UIDevice+SLExtension.h"
+#import "UIImage+ALinExtension.h"
+#import "UIImageView+Extension.h"
+#import "UIView+SLExtension.h"
+#import "UIViewController+SLExtension.h"
+
+
+
+
+//  屏幕的frame
+#define DeviceFrame [UIScreen mainScreen].bounds
+//  屏幕的size
+#define DeviceSize [UIScreen mainScreen].bounds.size
+
+#define ScreenWidth DeviceSize.width
+#define ScreenHeight DeviceSize.height
+
+//  弱引用宏
+#define WeakSelf(VC) __weak VC *weakSelf = self
+//是否登录过
+//#define isLogin @"isLogin"
+
+//  app version
+#define APPVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+//  设备id
+#define DeviceId [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+
+//  UUID获取
+#define UUID [[[UIDevice currentDevice] identifierForVendor] UUIDString]
+#define DeviceModel [[UIDevice currentDevice] model]
+
+//app主打颜色
+#define AppDefaultColor  [UIColor colorWithRed:143/255.0 green:226/255.0 blue:211/255.0 alpha:1]
+
+//随机颜色
+#define RandomColor  [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
+
+//URL
+#define URL(STRING)  [NSURL URLWithString:STRING]
+//IMG
+#define IMG(IMGSTR)  [UIImage imageNamed:IMGSTR]
+
+//  document路径
+#define DocumentPath [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
+//#define UserPath [DocumentPath stringByAppendingPathComponent:@"3HDoctorClient/THUser"]
+
+
+//线上关闭NsLog
+//#ifndef DEBUG
+//
+//#define NSLog(...) NSLog(__VA_ARGS__)
+//
+//#else
+//
+//#define NSLog(...) {}
+//
+//#endif
+
+
+
+
+
+
+
+
+#endif /* PrefixHeader_pch */
